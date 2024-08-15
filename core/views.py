@@ -7,6 +7,7 @@ from .models import Profile, Post, LikePost, FollowersCount
 from itertools import chain
 import random
 
+
 # Create your views here.
 @login_required(login_url='signin')
 def index(request):
@@ -275,3 +276,4 @@ def signin(request):
 def logout(request):
     auth.logout(request)
     return redirect('signin')
+
